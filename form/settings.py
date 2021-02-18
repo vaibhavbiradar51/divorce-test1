@@ -131,7 +131,7 @@ TEMPLATE_DIRS    = (
 )
 
 STATICFILES_DIRS = (
-    BASE_DIR.child('myapp').child('static'),
+    BASE_DIR.child('divorce').child('static'),
 )
 
 STATIC_URL         = '/static/'
