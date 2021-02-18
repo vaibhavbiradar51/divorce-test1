@@ -66,6 +66,7 @@ pymacaroons==0.13.0
 PyNaCl==1.1.2
 PyPDF2==1.26.0
 pyRFC3339==1.0
+pyhton==3.68
 python-apt==1.6.5+ubuntu0.5
 python-bidi==0.4.2
 python-dateutil==2.6.1
