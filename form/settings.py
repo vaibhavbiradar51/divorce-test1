@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 import os
 from pathlib import Path
+from unipath import Path
+
 #import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -120,11 +122,20 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
+BASE_DIR         =  Path(__file__).ancestor(3)
+MEDIA_ROOT       =  BASE_DIR.child('media')
+STATIC_ROOT      =  BASE_DIR.child('static')
 
-STATIC_URL = '/static/admin/'
+TEMPLATE_DIRS    = (
+    BASE_DIR.child('templates'),
+)
 
+STATICFILES_DIRS = (
+    BASE_DIR.child('myapp').child('static'),
+)
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_URL         = '/static/'
+MEDIA_URL          = '/media/'
+
 
 #django_heroku.settings(locals())
