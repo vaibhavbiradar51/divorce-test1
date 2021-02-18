@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 import os
 from pathlib import Path
-from unipath import Path
+
 
 #import django_heroku
 
@@ -122,20 +122,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-BASE_DIR         =  Path(__file__).ancestor(3)
-MEDIA_ROOT       =  BASE_DIR.child('media')
-STATIC_ROOT      =  BASE_DIR.child('static')
-
-TEMPLATE_DIRS    = (
-    BASE_DIR.child('templates'),
-)
-
-STATICFILES_DIRS = (
-    BASE_DIR.child('divorce').child('static'),
-)
-
-STATIC_URL         = '/static/'
-MEDIA_URL          = '/media/'
-
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
 
 #django_heroku.settings(locals())
