@@ -22,50 +22,18 @@
 
 
     <div class="form_holder">
-      <form id="msform" action="" method="POST">
-      {% csrf_token %}
-        <ul id="progressbar">
-          <li class="active">Form 1</li>
-          <li>Form 2</li>
-          <li>Form 3</li>
-        </ul>
-        <fieldset>
-          <h2 class="fs-title">Form 1</h2>
-          
-          <input type="text" name="name" placeholder="name" />
-          <input type="text" name="State_issued_divorce_id" placeholder="State issued divorce id" />
-      
-          <input
-            type="submit"
-            name="next"
-            class="next action-button"
-            value="Next"
-          />
-        </form>
-        </fieldset>
-        <!-- <fieldset>
-          <h2 class="fs-title">Form 2</h2>
-          <form method="POST" action="form_2">
+      <form method="POST" action="form_3" id="msform">
 
+        {% csrf_token %}
+             
+
+  
+        <ul id="progressbar">
+          <li class="active" >Form 1</li>
+          <li class="active">Form 2</li>
+          <li class="active">Form 3</li>
+        </ul>
        
-          <input type="text" name="Date_of_birth" placeholder="MM-DD-YYYY" />
-          <input type="text" name="Nationality" placeholder="Nationality" />
-       
-       
-          <input
-            type="button"
-            name="previous"
-            class="previous action-button"
-            value="Previous"
-          />
-          <input
-            type="submit"
-            name="next"
-            class="next action-button"
-            value="Next"
-          />
-        </form>
-        </fieldset>
         <fieldset>
           <h2 class="fs-title">Form 3</h2>
 
@@ -73,14 +41,14 @@
           <input type="text" name="Maritial_status" placeholder="Maritial Status" />
           <input type="text" name="Highest_education" placeholder="Highest  Education " />
           
-          <input
-            type="button"
-            name="previous"
-            class="previous action-button"
-            value="Previous"
-          />
-         <button type="submit" class="previous action-button">Submit</button>
-        </fieldset> -->
+         
+          
+            
+
+          <a href="{%url 'divorce:form_2' %}" class="previous action-button"  >Previous</a>
+        <button type="submit" class="next action-button">Submit</button>
+        </form>
+        </fieldset>
      
     </div>
     <!-- Optional JavaScript; choose one of the two! -->

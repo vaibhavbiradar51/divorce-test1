@@ -32,6 +32,7 @@ body {
   display: none;
 }
 #msform input,
+#msform a,
 #msform textarea {
   padding: 15px;
   border: 1px solid #ccc;
