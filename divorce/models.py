@@ -12,4 +12,4 @@ class Divorce(models.Model):
     Highest_education = models.CharField(max_length=100, null=True)
 
     def __str__(self):
-    	return self.sno
+    	return str(self.sno)
