@@ -46,7 +46,7 @@ def form_2(request):
 
             return redirect('divorce:form_3')
         else:
-            form = ApplicatioForm()
+            form = ApplicationForm()
             return render(request,'form_2.html',{'form':form,'error':'Enter valid captcha'})
     else:
         form = ApplicationForm()
