@@ -34,13 +34,16 @@
           
           <input type="text" name="name" placeholder="name" />
           <input type="text" name="State_issued_divorce_id" placeholder="State issued divorce id" />
-      
+          {{form.captcha}}
           <input
             type="submit"
             name="next"
             class="next action-button"
             value="Next"
           />
+          {% if error %}
+          {{ error }}
+          {% endif %}
         </form>
         </fieldset>
         <!-- <fieldset>

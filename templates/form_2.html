@@ -36,8 +36,8 @@
        
           <input type="text" name="Date_of_birth" placeholder="MM-DD-YYYY" />
           <input type="text" name="Nationality" placeholder="Nationality" />
-       
-       
+          {{form.captcha}}
+          
      
           <!-- <a href="http://"></a> -->
           <a href="{%url 'divorce:form_1' %}" class="previous action-button"  >Previous</a>
@@ -48,6 +48,9 @@
             class="next action-button"
             value="Next"
           />
+          {% if error %}
+          {{ error }}
+          {% endif %}
         </form>
         </fieldset>
      

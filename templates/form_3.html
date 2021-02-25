@@ -41,12 +41,15 @@
           <input type="text" name="Maritial_status" placeholder="Maritial Status" />
           <input type="text" name="Highest_education" placeholder="Highest  Education " />
           
-         
+         {{form.captcha}}
           
             
 
           <a href="{%url 'divorce:form_2' %}" class="previous action-button"  >Previous</a>
         <button type="submit" class="next action-button">Submit</button>
+        {% if error %}
+          {{ error }}
+          {% endif %}
         </form>
         </fieldset>
      
